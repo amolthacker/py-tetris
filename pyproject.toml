@@ -1,0 +1,20 @@
+[project]
+name = "drw_tetris"
+version = "0.0.1"
+authors = [
+  { name="Amol Thacker", email="amolthacker@gmail.com" },
+]
+description = "A simple Tetris terminal simulator"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
