@@ -16,9 +16,11 @@ Create virtualenv
 ```
 $ cd drw-tetris
 $ python -m venv .venv
-    # Activate environment with:
-    #      `source .venv/bin/activate` on Unix/macOS
-    # or   `.venv\Scripts\activate` on Windows
+
+# Activate environment with:
+source .venv/bin/activate # on Unix/macOS
+# or   
+.venv\Scripts\activate # on Windows
 
 $ python -m pip install -r requirements.txt
 $ python -m pip install -e .
