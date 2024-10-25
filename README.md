@@ -21,17 +21,18 @@ $ python -m venv .venv
     # or   `.venv\Scripts\activate` on Windows
 
 $ python -m pip install -r requirements.txt
-$ python -m pip install --editable .
+$ python -m pip install -e .
 ```
 
-Create distribution
+Create and install distribution
 ```
 $ python -m build .
+$ pip install dist/tetris-0.0.1-py3-none-any.whl
 ```
 
 #### Run Simulator
 ```
-$ python src/main.py < input.txt > output.txt
+$ python -m tetris < input.txt > output.txt
 ```
 
 #### Run Unit Tests
@@ -43,17 +44,17 @@ $ python -m unittest discover -s tests
 
 Build image
 ```
-$ docker build -t drw-tetris .
+$ docker build -t tetris .
 ```
 
 Create container
 ```
-$ docker run --name drw-tetris -it -d drw-tetris
+$ docker run --name tetris -it -d tetris
 ```
 
 #### Run Simulator
 ```
-$ docker exec -i drw-tetris python src/main.py < input.txt > output_local.txt
+$ docker exec -i tetris python -m tetris < input.txt > output.txt
 ```
 
 
@@ -61,9 +62,9 @@ $ docker exec -i drw-tetris python src/main.py < input.txt > output_local.txt
 
 Create executable
 
-[Optional. Can use the pre-created executable `tetrix.exe` in `/dist` instead]
+[Optional. Can use the pre-created executable `tetris.exe` in `/dist` instead]
 ```
-$ pyinstaller --paths src/tetris_engine --name tetris --onefile src/main.py
+$ pyinstaller --paths src/tetris --name tetris --onefile src/tetris/__main__.py
 ```
 
 #### Run Simulator

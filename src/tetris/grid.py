@@ -1,6 +1,6 @@
 from typing import List
 
-from tetris_engine.piece import Piece
+from tetris.piece import Piece
 
 
 class Grid:

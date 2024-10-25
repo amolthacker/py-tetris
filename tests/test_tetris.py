@@ -4,14 +4,14 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.getcwd(), "src"))
 
-from tetris_engine.tetris import Tetris
+from tetris.simulator import Simulator
 
 
 class TestTetris(unittest.TestCase):
 
     @classmethod
     def setUpClass(self):
-        self.tetris = Tetris()
+        self.tetris = Simulator()
 
     def test_input_sequence_1(self) -> None:
         input_seq = "Q0"

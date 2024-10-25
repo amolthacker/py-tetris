@@ -1,8 +1,8 @@
-from tetris_engine.grid import Grid
-from tetris_engine.piece import Piece
+from tetris.grid import Grid
+from tetris.piece import Piece
 
 
-class Tetris:
+class Simulator:
 
     def __init__(self, grid_height: int = Grid.HEIGHT) -> None:
         self.grid_height = grid_height

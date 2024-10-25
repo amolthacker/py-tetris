@@ -1,5 +1,5 @@
 [project]
-name = "drw_tetris"
+name = "tetris"
 version = "0.0.1"
 authors = [
   { name="Amol Thacker", email="amolthacker@gmail.com" },
@@ -10,6 +10,9 @@ requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3"
 ]
+
+[project.scripts]
+tetris = "tetris.__main__:main"
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
