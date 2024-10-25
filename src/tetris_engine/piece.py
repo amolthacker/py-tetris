@@ -22,7 +22,7 @@ class Piece:
 
     CHAR = "O"
 
-    def __init__(self, shape_letter: str):
+    def __init__(self, shape_letter: str) -> None:
         self.shape = Shape[shape_letter]
 
     def shape(self) -> Shape:

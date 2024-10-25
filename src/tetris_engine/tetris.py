@@ -4,7 +4,7 @@ from tetris_engine.piece import Piece
 
 class Tetris:
 
-    def __init__(self, grid_height: int = Grid.HEIGHT):
+    def __init__(self, grid_height: int = Grid.HEIGHT) -> None:
         self.grid_height = grid_height
 
     def simulate(self, input_str: str, display_enabled: bool = False) -> int:

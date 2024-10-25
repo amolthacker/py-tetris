@@ -9,7 +9,7 @@ class Grid:
     HEIGHT = 10
     WIDTH = 10
 
-    def __init__(self, rows: int = HEIGHT, cols: int = WIDTH, char: str = CHAR):
+    def __init__(self, rows: int = HEIGHT, cols: int = WIDTH, char: str = CHAR) -> None:
         self.height = rows
         self.width = cols
         self.char = char
@@ -17,7 +17,7 @@ class Grid:
         self.score = 0  # Tetris game score
         self.rem_rows = 0  # No.of partially filled rows remaining (output)
 
-    def place_piece(self, piece: Piece, piece_y: int = 0, piece_x: int = 0):
+    def place_piece(self, piece: Piece, piece_y: int = 0, piece_x: int = 0) -> None:
         """Place the piece on the grid"""
         for row_idx, row in enumerate(piece.get()):
             for col_idx, col in enumerate(row):
@@ -77,7 +77,7 @@ class Grid:
         """Return Output (no.of partially filled rows remaining)"""
         return self.rem_rows
 
-    def _print_grid(self):
+    def _print_grid(self) -> None:
         """Prints the grid"""
         print("\n".join([" ".join([str(cell) for cell in row]) for row in self.grid]))
 
@@ -85,7 +85,7 @@ class Grid:
         self,
         input_seq: str,
         display_enabled: bool = False,
-    ):
+    ) -> None:
         """Prints the current state of game"""
         if display_enabled:
             print(f"\n[{input_seq[1:]}]")

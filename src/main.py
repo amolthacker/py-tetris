@@ -4,7 +4,7 @@ from typing import List
 from tetris_engine.tetris import Tetris
 
 
-def main():
+def main() -> None:
     """Entry point to run the simulator"""
     tetris = Tetris()
     for input_str in sys.stdin:
