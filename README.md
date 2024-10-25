@@ -5,7 +5,7 @@ A simple Tetris simulator
 
 ## Build and Run
 
-### Using Python Virtualenv
+### If using Python virtualenv
 
 Setup 
 ```
@@ -26,23 +26,23 @@ $ python -m pip install -r requirements.txt
 $ python -m pip install -e .
 ```
 
-Create and install distribution
+To create and install distribution
 ```
 $ python -m build .
 $ pip install dist/tetris-0.0.1-py3-none-any.whl
 ```
 
-#### Run Simulator
+#### Running Simulator
 ```
 $ python -m tetris < input.txt > output.txt
 ```
 
-#### Run Unit Tests
+#### Running Unit Tests
 ```
 $ python -m unittest discover -s tests
 ```
 
-### Using Docker
+### If using Docker
 
 Build image
 ```
@@ -54,13 +54,13 @@ Create container
 $ docker run --name tetris -it -d tetris
 ```
 
-#### Run Simulator
+#### Running Simulator
 ```
 $ docker exec -i tetris python -m tetris < input.txt > output.txt
 ```
 
 
-### Using Executable
+### If using Executable
 
 Create executable
 
@@ -69,7 +69,7 @@ Create executable
 $ pyinstaller --paths src/tetris --name tetris --onefile src/tetris/__main__.py
 ```
 
-#### Run Simulator
+#### Running Simulator
 ```
 $ ./dist/tetris < input.txt > output.txt
 ```
