@@ -22,15 +22,13 @@ class Simulator:
             x = int(col_offset)
             y = 0
 
-            # The max Y coordinate for the piece
-            max_y = self.grid_height - len(piece.get())
-
             # Game Over if the grid is full
             if grid.is_full(piece, y, x):
                 print("Game Over!")
                 break
 
             # Simulate dropping the piece
+            max_y = self.grid_height - len(piece.get())
             y = grid.drop_piece(piece, y, x, max_y)
             y += 1
             # Check for collision

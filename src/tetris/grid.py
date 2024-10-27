@@ -33,9 +33,9 @@ class Grid:
         self.rem_rows = max(self.rem_rows, self.height - y_post_drop)
         return y_post_drop
 
-    def piece_colliding(self, col: Piece, piece_y: int, piece_x: int) -> bool:
+    def piece_colliding(self, piece: Piece, piece_y: int, piece_x: int) -> bool:
         """Check if there is any collision with other pieces"""
-        for row_idx, row in enumerate(col.get()):
+        for row_idx, row in enumerate(piece.get()):
             for col_idx, col in enumerate(row):
                 if col == 1:
                     grid_y, grid_x = piece_y + row_idx, piece_x + col_idx
