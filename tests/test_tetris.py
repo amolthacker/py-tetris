@@ -127,7 +127,6 @@ class TestTetris(unittest.TestCase):
         piece = Piece(shape_letter=Shape.Q.name)
         for y in range(8, 0, -2):
             tetris_grid.place_piece(piece, y, 0)
-        tetris_grid._print_grid()
         self.assertTrue(tetris_grid.is_full(piece, 2, 0))
         self.assertFalse(tetris_grid.is_full(piece, 2, 2))
 
