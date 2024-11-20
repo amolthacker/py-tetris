@@ -1,4 +1,4 @@
-# drw-tetris
+# py-tetris
 
 A simple Tetris simulator
 
