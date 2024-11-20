@@ -1,6 +1,6 @@
 # py-tetris
 
-A simple Tetris simulator
+A [Simple Tetris Simulator](SimpleTetrisSimulator.pdf). 
 
 
 ## Building and Running
